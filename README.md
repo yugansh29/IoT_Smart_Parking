@@ -35,20 +35,26 @@ The smart parking system can be divided into three main stages: data collection,
     The HC-SR04 emits an ultrasonic sound pulse and then listens for its echo reflecting off an object (ideally a parked car).
     By measuring the time it takes for the sound wave to travel back, the distance to the nearest object can be calculated.
 
-2. Data Processing on ESP32:
+![image](https://github.com/yugansh29/IoT_Smart_Parking/assets/123052599/2e8de84f-82f6-4c6e-8d0b-0d3bc2813edd)
+
+
+3. Data Processing on ESP32:
 
     The ESP32 converts the measured distance into centimeters.
     A refined distance interpretation algorithm is applied. This might involve:
         Setting different thresholds to distinguish between vacant spaces, occupied spaces, and cars entering/leaving a space.
         Assigning a specific value to each sensor reading that reflects the occupancy state (e.g., 0 - vacant, 1 - occupied, 2 - car positioning).
 
-3. Data Visualization (User Interface):
+4. Data Visualization (User Interface):
 
     The processed data (parking space ID and occupancy state) is transmitted from the ESP32 to a designated platform like ThingSpeak.
     A separate user interface retrieves and displays this data in a user-friendly format. This could be:
         A mobile app showing a parking lot map with color indicators for vacant/occupied spaces.
         A web interface with real-time parking availability information.
         A local display (LCD or LED matrix) showing nearby parking space statuses (if no internet connection is available).
+   
+![image](https://github.com/yugansh29/IoT_Smart_Parking/assets/123052599/f7735877-1c40-4773-8951-b8bf3bc4c262)
+
 
 Benefits of a Smart Parking System
 
